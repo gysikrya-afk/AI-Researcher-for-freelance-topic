@@ -17,7 +17,7 @@ if st.button('Начать поиск'):
     else:
         try:
             with st.spinner('Подготовка агента...'):
-                agent = create_agent(model='gemini-2.5-flash',api_key=api_key)
+                agent = create_agent(model='gemini-2.5-flash-lite',api_key=api_key)
             with st.spinner('Подготовка ответа...'):
                 responce = agent.invoke(f'{SYSTEM_PROMPT}.Тема:{topic}')
             
