@@ -13,8 +13,8 @@ def create_agent(model: str,api_key: str,):
         llm=llm,
         tools=[search_tool],
         agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-        verbose=True
-
+        verbose=True,
+        handle_parsing_error=True
     )
 
     return agent
