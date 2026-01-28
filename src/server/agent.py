@@ -14,7 +14,7 @@ def create_agent(model: str,api_key: str,):
         tools=[search_tool],
         agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
         verbose=True,
-        handle_parsing_error=True
+        handle_parsing_errors=True
     )
 
     return agent
