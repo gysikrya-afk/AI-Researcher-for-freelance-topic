@@ -22,6 +22,6 @@ if st.button('Начать поиск'):
                 responce = agent.invoke(f'{SYSTEM_PROMPT}.Тема:{topic}')
             
             st.markdown('### Готово!')
-            st.write(responce['output'])
+            st.write(responce)
         except Exception as e:
             st.error(f'Ошибка :{e}!')
